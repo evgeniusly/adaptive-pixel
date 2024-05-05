@@ -1,0 +1,29 @@
+{
+  "author": "evgeniusly",
+  "name": "adaptive-pixel",
+  "version": "0.0.1",
+  "main": "dist/index.js",
+  "module": "dist/index.mjs",
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "copyAssets": "ncp src/sass/ dist/",
+    "build": "tsup && npm run copyAssets",
+    "lint": "tsc"
+  },
+  "devDependencies": {
+    "tsup": "^8.0.2",
+    "typescript": "^5.4.5"
+  },
+  "license": "MIT",
+  "description": "Provides a multiplier value for interface scaling via CSS and JS",
+  "keywords": [
+    "JS",
+    "CSS",
+    "SASS",
+    "adaptive",
+    "flexible"
+  ]
+}

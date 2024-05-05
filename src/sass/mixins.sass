@@ -1,0 +1,51 @@
+// media queries
+=mobile
+  @media (max-width: 900px), (max-height: 540px)
+    @content
+
+=desktop
+  @media (min-width: 901px) and (min-height: 541px)
+    @content
+
+// adaptive pixel
+@function apx($val)
+  $list: ()
+  @each $value in $val
+    @if $value == 0
+      $list: append($list, 0)
+    @else
+      $list: append($list, calc(var(--apx, 1px) * #{$value}))
+  @return $list
+
+=afs($font-size, $line-height: null, $font-weight: 0)
+  font-size: apx($font-size)
+  @if $line-height != null
+    @if type-of($line-height) == 'number' and unit($line-height) == '%'
+      line-height: $line-height
+    @else
+      @if $line-height == 0
+        line-height: normal
+      @if $line-height != 0
+        line-height: apx($line-height)
+  @if $font-weight != 0
+    font-weight: $font-weight
+
+=awh($width, $height: null)
+  width: apx($width)
+  height: if($height,apx($height),apx($width))
+
+=alt($left, $top: null)
+  left: apx($left)
+  top: if($top,apx($top),apx($left))
+
+=art($right, $top: null)
+  right: apx($right)
+  top: if($top,apx($top),apx($right))
+
+=alb($left, $bottom: null)
+  left: apx($left)
+  bottom: if($bottom,apx($bottom),apx($left))
+
+=arb($right, $bottom: null)
+  right: apx($right)
+  bottom: if($bottom,apx($bottom),apx($right))
