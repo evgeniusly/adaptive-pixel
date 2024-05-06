@@ -12,6 +12,10 @@ Also contains SASS mixins for ease of use.
 4. In SASS you can use it with helpful mixins that convert incoming values to CSS syntax `calc(var(--apx, 1px) * #{$your_value})`.
 5. If you set _breakpoints_ according to your mockups, you can take all sizes as is from there for use in mixins. In this case, mockup content will be scaled in the _viewport_ with _contain_ strategy.<br/>(see more below)
 
+## Demo
+
+[React + SCSS](https://codesandbox.io/p/sandbox/adaptive-pixel-example-base-myvjdl)
+
 ## Installation
 
 ```shell
