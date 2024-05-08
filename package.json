@@ -1,7 +1,7 @@
 {
   "author": "evgeniusly",
   "name": "adaptive-pixel",
-  "version": "0.0.3",
+  "version": "1.0.0",
   "main": "dist/index.js",
   "module": "dist/index.mjs",
   "types": "dist/index.d.ts",
@@ -22,7 +22,7 @@
     "url": "https://github.com/evgeniusly/adaptive-pixel.git"
   },
   "license": "MIT",
-  "description": "Provides a multiplier value for interface scaling via CSS and JS",
+  "description": "Creating fully flexible / responsive web interfaces. Provides a multiplier value for interface scaling via CSS and JS.",
   "keywords": [
     "JS",
     "CSS",

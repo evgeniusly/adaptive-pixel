@@ -1,5 +1,7 @@
 # adaptive-pixel
 
+This is a package for creating fully flexible / responsive web interfaces.
+
 Provides a _multiplier value_ for interface scaling via CSS and JS. Based on customizable media breakpoints.
 
 Also contains SASS mixins for ease of use.
@@ -14,7 +16,10 @@ Also contains SASS mixins for ease of use.
 
 ## Demo
 
-[React + SCSS](https://codesandbox.io/p/sandbox/adaptive-pixel-example-base-myvjdl)
+**React + SASS**
+[live demo](https://adaptive-pixel-demo-react-sass.vercel.app/)
+and
+[code](https://github.com/evgeniusly/adaptive-pixel--demo--react-sass).
 
 ## Installation
 
