@@ -49,3 +49,10 @@
 =arb($right, $bottom: null)
   right: apx($right)
   bottom: if($bottom,apx($bottom),apx($right))
+
+=altrb($l, $t, $r, $b, $w, $h)
+  position: absolute
+  margin: auto
+  +alt($l, $t)
+  +arb($r, $b)
+  +awh($w, $h)

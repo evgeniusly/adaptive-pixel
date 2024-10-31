@@ -36,6 +36,7 @@ export const getApxInterface = (params: IGetApxInterfaceParams = {}) => {
       if (value === prevValue) return;
       prevValue = value;
       document.documentElement.style.setProperty("--apx", `${value}px`);
+      document.documentElement.style.setProperty("--scale", `${value}`);
       if (typeof setter === "function") setter(value);
     };
 

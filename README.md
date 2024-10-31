@@ -85,6 +85,13 @@ In this case we have two mockup resolutions: "Desktop" `1440 x 750` and "Mobil
 
 ---
 
+#### Add CSS variables to the :root
+
+| name      | value        |
+| --------- | ------------ |
+| `--apx`   | `${value}px` |
+| `--scale` | `${value}`   |
+
 ### 📜 getIsMobileInterface
 
 Function retun an interface that can return _match media_ check result (see below), and can add/remove listeneres for refresh value on _match media_ update.
@@ -209,6 +216,20 @@ Same for other mixins, but for the _left_, _top_, _right_ and _bottom_ respectiv
 
 ---
 
+#### 📜 +altrb($l, $t, $r, $b, $w, $h)
+
+Return next:
+
+```sass
+position: absolute
+margin: auto
++alt($l, $t)
++arb($r, $b)
++awh($w, $h)
+```
+
+---
+
 #### 📜 +desktop
 
 #### 📜 +mobile
@@ -244,6 +265,12 @@ This mixins will wrap CSS properties of the selector into the `@media` rules.
 ```
 
 > **Note:** If you set your own _breakpoints_, you should make your own media mixins.
+
+## JS Helpers
+
+### apxCssValue (val: number) => string
+
+Get a number and return a string for inline css style: `calc(var(--apx, 1px) * ${val})` (like a SASS mixin `apx()`).
 
 ## Examples
 
