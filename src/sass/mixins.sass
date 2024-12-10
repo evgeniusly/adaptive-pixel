@@ -1,3 +1,7 @@
+@use 'sass:list'
+@use 'sass:math'
+@use 'sass:meta'
+
 // media queries
 =mobile
   @media (max-width: 900px), (max-height: 540px)
@@ -12,15 +16,15 @@
   $list: ()
   @each $value in $val
     @if $value == 0
-      $list: append($list, 0)
+      $list: list.append($list, 0)
     @else
-      $list: append($list, calc(var(--apx, 1px) * #{$value}))
+      $list: list.append($list, calc(var(--apx, 1px) * #{$value}))
   @return $list
 
 =afs($font-size, $line-height: null, $font-weight: 0)
   font-size: apx($font-size)
   @if $line-height != null
-    @if type-of($line-height) == 'number' and unit($line-height) == '%'
+    @if meta.type-of($line-height) == 'number' and math.unit($line-height) == '%'
       line-height: $line-height
     @else
       @if $line-height == 0
